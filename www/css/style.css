@@ -1,0 +1,61 @@
+/* Empty. Add your own CSS if you like */
+.bar
+{
+    background-color: #3E9CCA;
+}
+
+.title , .button-icon
+{
+    color: #fff;
+}
+
+
+
+
+.app-menu
+{
+  color:#3E9CCA;
+}
+
+.button-icon:hover
+{
+    color: #fff;
+}
+
+
+div.card
+{
+  background-color:#3E9CCA;
+}
+
+h2.news-title
+{
+  color:#fff; 
+  margin:10px 10px; 
+  font-size:24px; 
+  text-align:justify; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img.news-image
+{
+  width:100%;
+  margin-top:10px;
+}
+
+p.news-category
+{
+  font-size:18px; 
+  padding-right:10px;
+}
+
+i.news-icon
+{
+  margin-left:100px;
+}
+
+p.news-action
+{
+  font-size:20px; 
+  margin-left:5px;
+}

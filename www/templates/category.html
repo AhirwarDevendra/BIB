@@ -1,0 +1,17 @@
+<ion-view view-title="Bol India Bol" style="background-color: #ECFFFF;">
+  <ion-nav-buttons side="right" >
+    <button class="button button-icon icon ion-ios-upload-outline" ng-click="requestEvent()"></button>
+    <button menu-toggle="right" class="button button-icon icon ion-gear-a"></button>
+  </ion-nav-buttons>
+    <ion-content class="has-header">
+        
+        <ion-list style="margin:20px;text-align:center;">
+            <ion-item class="item item-thumbnail-left item-icon-right video-item" ng-repeat="category in newsCategory">
+                <img src="{{category.face}}" style="margin-left:10px;border:1px #000 solid" >
+                <h1 style="vertical-align:middle; font-size:25px;">{{category.name}}</h1>                
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,128 @@
+<ion-view view-title="Bol India Bol" style="background-color: #ECFFFF;">
+  <ion-nav-buttons side="right" >
+    <button class="button button-icon icon ion-ios-loop-strong" ng-click="requestEvent()"></button>
+    <button class="button button-icon icon ion-ios-upload-outline" ng-click="requestEvent()"></button>
+    <button menu-toggle="right" class="button button-icon icon ion-gear-a"></button>
+  </ion-nav-buttons>
+    <ion-content class="has-header">
+      <div class="card list" ng-repeat="news in newsReports">
+            
+        <div>
+        <h2  class="news-title">{{news.title}}</h2>
+            <img src="{{news.image}}" class="news-image" >
+        </div>
+        
+            
+        <div class="item item-avatar-left item-icon-right" href="#">
+    <img ng-src="img/avatar/man-1.png">
+                <h2>News Report By</h2>
+                <p>{{news.reportedby}}</p>
+    <i class="icon"><p class="news-category" >{{news.category}}</p></i>
+  </div>
+        
+        <div class="item item-icon-left item-icon-right">
+    <i class="icon ion-ios-heart-outline" style="margin-left:100px;"><p class="news-action">Like</p></i>
+    &nbsp;
+          <i class="icon ion-android-share-alt" style="margin-right:100px;"><p class="news-action">Share</p></i>
+   
+  </div>
+            
+        </div>
+      <!--
+      <div class="card list" style="background-color:#3E9CCA;" >
+            
+        <div >
+        <h2 style="color:#fff; margin:10px 10px; font-size:24px; text-align:justify; font-family: Arial, Helvetica, sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h2>
+            <img src="http://static.abplive.in/wp-content/uploads/sites/2/2016/08/13063445/000_EL4UM.jpg" style="width:100%;margin-top:10px;">
+        </div>
+        
+            
+        <div class="item item-avatar-left item-icon-right" href="#">
+    <img ng-src="img/avatar/man-1.png">
+                <h2>News Report By</h2>
+                <p>Devendra</p>
+    <i class="icon"><p style="font-size:18px; padding-right:10px;">Politics</p></i>
+  </div>
+        
+        <div class="item item-icon-left item-icon-right">
+    <i class="icon ion-ios-heart-outline" style="margin-left:100px;"><p style="font-size:20px; margin-left:5px;">Like</p></i>
+    &nbsp;
+          <i class="icon ion-android-share-alt" style="margin-right:100px;"><p style="font-size:20px; margin-left:5px;">Share</p></i>
+   
+  </div>
+            
+        </div>
+      <div class="card list" style="background-color:#3E9CCA;" >
+            
+        <div >
+        <h2 style="color:#fff; margin:10px 10px; font-size:24px; text-align:justify; font-family: Arial, Helvetica, sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h2>
+            <img src="http://static.abplive.in/wp-content/uploads/sites/2/2016/08/11141827/PM-Modi-580x350.jpg" style="width:100%;margin-top:10px;">
+        </div>
+        
+            
+        <div class="item item-avatar-left item-icon-right" href="#">
+    <img ng-src="img/avatar/man-1.png">
+                <h2>News Report By</h2>
+                <p>Devendra</p>
+    <i class="icon"><p style="font-size:18px; padding-right:10px;">Politics</p></i>
+  </div>
+        
+        <div class="item item-icon-left item-icon-right">
+    <i class="icon ion-ios-heart-outline" style="margin-left:100px;"><p style="font-size:20px; margin-left:5px;">Like</p></i>
+    &nbsp;
+          <i class="icon ion-android-share-alt" style="margin-right:100px;"><p style="font-size:20px; margin-left:5px;">Share</p></i>
+   
+  </div>
+            
+        </div>
+      <div class="card list" style="background-color:#3E9CCA;" >
+            
+        <div >
+        <h2 style="color:#fff; margin:10px 10px; font-size:24px; text-align:justify; font-family: Arial, Helvetica, sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h2>
+            <img src="http://static.abplive.in/wp-content/uploads/sites/2/2016/08/12111755/army-580x392.jpg" style="width:100%;margin-top:10px;">
+        </div>
+        
+            
+        <div class="item item-avatar-left item-icon-right" href="#">
+    <img ng-src="img/avatar/man-1.png">
+                <h2>News Report By</h2>
+                <p>Devendra</p>
+    <i class="icon"><p style="font-size:18px; padding-right:10px;">Politics</p></i>
+  </div>
+        
+        <div class="item item-icon-left item-icon-right">
+    <i class="icon ion-ios-heart-outline" style="margin-left:100px;"><p style="font-size:20px; margin-left:5px;">Like</p></i>
+    &nbsp;
+          <i class="icon ion-android-share-alt" style="margin-right:100px;"><p style="font-size:20px; margin-left:5px;">Share</p></i>
+   
+  </div>
+            
+        </div>
+      <div class="card list" style="background-color:#3E9CCA;" >
+            
+        <div >
+        <h2 style="color:#fff; margin:10px 10px; font-size:24px; text-align:justify; font-family: Arial, Helvetica, sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</h2>
+            <img src="http://www.wahcricket.com/img/images/clients/abp/content/2016/aug/628/ajinkyarahanerohitsharmateamindia1308.jpg" style="width:100%;margin-top:10px;">
+        </div>
+        
+            
+        <div class="item item-avatar-left item-icon-right" href="#">
+    <img ng-src="img/avatar/man-1.png">
+                <h2>News Report By</h2>
+                <p>Devendra</p>
+    <i class="icon"><p style="font-size:18px; padding-right:10px;">Politics</p></i>
+  </div>
+        
+        <div class="item item-icon-left item-icon-right">
+    <i class="icon ion-ios-heart-outline" style="margin-left:100px;"><p style="font-size:20px; margin-left:5px;">Like</p></i>
+    &nbsp;
+          <i class="icon ion-android-share-alt" style="margin-right:100px;"><p style="font-size:20px; margin-left:5px;">Share</p></i>
+   
+  </div>
+            
+        </div>
+      -->
+       
+
+    </ion-content>
+</ion-view>
