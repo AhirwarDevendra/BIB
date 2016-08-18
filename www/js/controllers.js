@@ -24,14 +24,25 @@ angular.module('bib.controllers',[])
         $state.go('app.category');
     }
   
+    $scope.recentnews = function()
+    {
+      
+        $state.go('app.home');
+      
+    }
   
   
+    
   
 }])
 
-.controller('HomeCtrl',['$scope',function($scope){
+
+
+.controller('HomeCtrl',['$scope','$ionicHistory',function($scope,$ionicHistory){
     console.log("Home called");
   
+  
+    
   
     $scope.newsReports = 
       [
@@ -108,4 +119,57 @@ angular.module('bib.controllers',[])
     ];
   
   console.log($scope.newsCategory);
+}])
+
+.controller('NewsFeedsCtrl',['$scope','$state','$ionicHistory',function($scope,$state,$ionicHistory){
+  
+  $ionicHistory.nextViewOptions({
+        historyRoot: true,
+        disableAnimate: true,
+         expire: 300
+    });
+  
+  console.log('News Feeds Called');
+  
+  $scope.newsReports = 
+      [
+        {
+            id:1,
+            title:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            image:"http://static.abplive.in/wp-content/uploads/sites/2/2016/08/13063445/000_EL4UM.jpg",
+            reportedby:"Devendra",
+            category:"Nature"
+        },
+        {
+            id:2,
+            title:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            image:"http://www.freedigitalphotos.net/images/img/homepage/87357.jpg",
+            reportedby:"Devendra",
+            category:"Sports"
+        },
+        {
+            id:3,
+            title:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            image:"http://static.abplive.in/wp-content/uploads/sites/2/2016/08/11141827/PM-Modi-580x350.jpg",
+            reportedby:"Devendra",
+            category:"Politics"
+        },
+        {
+            id:4,
+            title:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            image:"http://static.abplive.in/wp-content/uploads/sites/2/2016/08/12111755/army-580x392.jpg",
+            reportedby:"Devendra",
+            category:"Politics"
+        },
+        {
+            id:5,
+            title:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",            image:"http://www.wahcricket.com/img/images/clients/abp/content/2016/aug/628/ajinkyarahanerohitsharmateamindia1308.jpg",
+            reportedby:"Devendra",
+            category:"Sports"
+        }
+        
+      ];
+  
+      console.log($scope.newsReports);
+  
 }])

@@ -61,6 +61,15 @@ angular.module('bib', ['ionic','bib.controllers','bib.services'])
       }
     })
 
+  .state('app.newsfeeds', {
+      url: "/newsfeeds/:newsId",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/newsfeeds.html",
+          controller: 'NewsFeedsCtrl'
+        }
+      }
+    })
   /*.state('app.feedback', {
       url: "/feedback",
       views: {
