@@ -9,8 +9,24 @@ angular.module('bib.controllers',[])
                 },1800);
 }])
 
-.controller('BibCtrl',['$scope','$state',function($scope,$state){
+.controller('BibCtrl',['$scope','$state','$ionicHistory',function($scope,$state,$ionicHistory){
 	console.log("Bib called");
+  
+    $ionicHistory.nextViewOptions({
+        historyRoot: true,
+        disableAnimate: true,
+         expire: 300
+    });
+  
+    $scope.category = function()
+    {
+        console.log('Category Called');
+        $state.go('app.category');
+    }
+  
+  
+  
+  
 }])
 
 .controller('HomeCtrl',['$scope',function($scope){
